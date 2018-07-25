@@ -1,0 +1,10 @@
+.imagenFondo {
+    background-image: url(../../img/foto1.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.logo {
+    margin-top: 200px;
+}
