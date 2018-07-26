@@ -7,11 +7,11 @@ function initMap() {
     });
 } */
 
-/* var map, infoWindow;
+var map, infoWindow;
 
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: -34.397, lng: 150.644 },
+        center: { lat: -33.431447, lng: -70.609332 },
         zoom: 12
     });
     infoWindow = new google.maps.InfoWindow;
@@ -43,14 +43,11 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         'Error: The Geolocation service failed.' :
         'Error: Your browser doesn\'t support geolocation.');
     infoWindow.open(map);
-} */
+}
 
-function initMap() {
+function geolocal() {
 
-    var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 12,
-        center: { lat: -33.431447, lng: -70.609332 }
-    });
+    var map = new google.maps.Map(document.getElementById('map'), );
 
     // Create an array of alphabetical characters used to label the markers.
     var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -80,6 +77,8 @@ var locations = [
 
 
 ]
+
+// Intento de filtro
 
 const inputText = document.querySelector("input")
 
