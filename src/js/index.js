@@ -80,3 +80,46 @@ var locations = [
 
 
 ]
+
+const inputText = document.querySelector("input")
+
+
+inputText.addEventListener("keypress", (event) => {
+    //wich y keyCode son eventos del teclado
+    let key = event.which || event.keyCode;
+    //13 es enter
+    if (key === 13) {
+        let movie = inputText.value;
+        console.log(movie)
+        inputText.value = ""; //limpia el input
+
+        fetch(`https://developers.zomato.com/api/v2.1/cuisines?city_id=83`)
+            .then(response => response.json()) //aqui transforma la respuesta(response) en json
+            .then(data => { //data puede ser cualquier nombre....this no se usa en fech por su alcance, por eso mejor then
+                console.log(data);
+                renderInfo(data);
+            })
+
+    }
+})
+
+const renderInfo = data => {
+
+}
+
+
+function busqueda(userStats) {
+    let name = document.getElementById("InputSearch").value;
+    let perfil = window.filterUsers(userStats, name);
+    let lista = document.getElementById("lista")
+    perfil.forEach((userStats) => {
+        let listaConStats = `<div class='fila'>
+      <div class="name">${userStats.name}</div>
+      <div class="percent">${userStats.stats.percent}</div>
+      <div class="exercisesCompleted">${userStats.stats.exercises.completed}</div>
+      <div class="quizzesCompleted">${userStats.stats.quizzes.completed}</div>
+      <div class="quizzesScoreAvg">${userStats.stats.quizzes.scoreAvg}</div>
+      <div class="readsCompleted">${userStats.stats.reads.completed}</div>
+      </div>`
+    })
+}
