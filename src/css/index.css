@@ -53,7 +53,7 @@ h1 {
 }
 
 .botonInicio {
-    width: 120px;
+    width: 130px;
     height: 46px;
     background-color: white;
     border: 3px solid #49c5b6;
@@ -64,7 +64,7 @@ h1 {
 }
 
 .botonInicio:hover {
-    width: 120px;
+    width: 130px;
     height: 46px;
     background-color: white;
     border: 3px solid #41b3a5;
