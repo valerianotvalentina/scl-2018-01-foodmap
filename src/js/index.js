@@ -1,18 +1,9 @@
-/* var map;
-
-function initMap() {
-    map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: -33.431447, lng: -70.609332 },
-        zoom: 12
-    });
-} */
-
 var map, infoWindow;
 
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: -33.431447, lng: -70.609332 },
-        zoom: 12
+        zoom: 15
     });
     infoWindow = new google.maps.InfoWindow;
 
@@ -25,7 +16,7 @@ function initMap() {
             };
 
             infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
+            infoWindow.setContent('Aquí estás tú');
             infoWindow.open(map);
             map.setCenter(pos);
         }, function() {
@@ -40,14 +31,19 @@ function initMap() {
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.setPosition(pos);
     infoWindow.setContent(browserHasGeolocation ?
-        'Error: The Geolocation service failed.' :
-        'Error: Your browser doesn\'t support geolocation.');
+        'Estás sin conexión :(' :
+        'Puedes aceptar la geolocalización nuevamente');
     infoWindow.open(map);
 }
 
-function geolocal() {
 
-    var map = new google.maps.Map(document.getElementById('map'), );
+/*
+function initMap() {
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 12,
+        center: { lat: -33.431447, lng: -70.609332 }
+    });
 
     // Create an array of alphabetical characters used to label the markers.
     var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -76,49 +72,4 @@ var locations = [
     { lat: -33.3949947, lng: -70.6171846 },
 
 
-]
-
-// Intento de filtro
-
-const inputText = document.querySelector("input")
-
-
-inputText.addEventListener("keypress", (event) => {
-    //wich y keyCode son eventos del teclado
-    let key = event.which || event.keyCode;
-    //13 es enter
-    if (key === 13) {
-        let movie = inputText.value;
-        console.log(movie)
-        inputText.value = ""; //limpia el input
-
-        fetch(`https://developers.zomato.com/api/v2.1/cuisines?city_id=83`)
-            .then(response => response.json()) //aqui transforma la respuesta(response) en json
-            .then(data => { //data puede ser cualquier nombre....this no se usa en fech por su alcance, por eso mejor then
-                console.log(data);
-                renderInfo(data);
-            })
-
-    }
-})
-
-const renderInfo = data => {
-
-}
-
-
-function busqueda(userStats) {
-    let name = document.getElementById("InputSearch").value;
-    let perfil = window.filterUsers(userStats, name);
-    let lista = document.getElementById("lista")
-    perfil.forEach((userStats) => {
-        let listaConStats = `<div class='fila'>
-      <div class="name">${userStats.name}</div>
-      <div class="percent">${userStats.stats.percent}</div>
-      <div class="exercisesCompleted">${userStats.stats.exercises.completed}</div>
-      <div class="quizzesCompleted">${userStats.stats.quizzes.completed}</div>
-      <div class="quizzesScoreAvg">${userStats.stats.quizzes.scoreAvg}</div>
-      <div class="readsCompleted">${userStats.stats.reads.completed}</div>
-      </div>`
-    })
-}
+] */

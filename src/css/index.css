@@ -8,9 +8,39 @@ body {
     margin-top: 60px;
     padding-left: 10px;
     font-size: 14px;
-    border-radius: 5px;
-    border: 1px solid #9B9B9B;
-    color: rgb(83, 83, 83)
+    border: 0px solid #9B9B9B;
+    color: rgb(83, 83, 83);
+    border-radius: 5px 0px 0px 5px;
+    -moz-border-radius: 5px 0px 0px 5px;
+    -webkit-border-radius: 5px 0px 0px 5px;
+}
+
+.botonBuscar {
+    height: 56px;
+    width: 90px;
+    margin-top: 60px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    background-color: #EC5B55;
+    border-radius: 0px 5px 5px 0px;
+    -moz-border-radius: 0px 5px 5px 0px;
+    -webkit-border-radius: 0px 5px 5px 0px;
+    border: 0px solid #9b9b9b;
+}
+
+.botonBuscar:hover {
+    height: 56px;
+    width: 90px;
+    margin-top: 60px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    background-color: rgb(218, 81, 76);
+    border-radius: 0px 5px 5px 0px;
+    -moz-border-radius: 0px 5px 5px 0px;
+    -webkit-border-radius: 0px 5px 5px 0px;
+    border: 0px solid #9b9b9b;
 }
 
 #map {
@@ -103,6 +133,13 @@ h1 {
 .imagenes {
     width: 100%;
     margin-top: 20px;
+    transition: transform .2s;
+}
+
+.imagenes:hover {
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .fotosCategorias {
@@ -118,4 +155,55 @@ h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+footer {
+    height: 100px;
+    background-color: #41b3a5;
+    margin-top: 60px;
+}
+
+.textoFooter {
+    font-size: 11px;
+    color: white;
+    padding-top: 40px;
+}
+
+#resultados {
+    margin-top: 20px;
+}
+
+.restoranes {
+    margin-bottom: 20px;
+    background-color: rgb(247, 247, 247);
+    border-radius: 4px;
+}
+
+.nombreResto {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(83, 83, 83);
+    margin-bottom: 0px;
+}
+
+.lugarResto {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(83, 83, 83);
+    margin-bottom: 0px;
+}
+
+.categResto {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(83, 83, 83);
+    margin-bottom: 0px;
+}
+
+.rating {
+    position: relative;
+    font-size: 16px;
+    font-weight: 700;
+    color: #41b3a5;
+    padding-left: 50%;
 }

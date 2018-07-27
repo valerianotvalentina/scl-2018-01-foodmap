@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="../src/css/index.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
-    <link rel="icon" href="" type="image/png" sizes="16x16">
+    <link rel="icon" href="../img/favicon.jpg" type="image/jpg" sizes="16x16">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 
 <body>
@@ -32,13 +33,29 @@
                 <div class="col">
                 </div>
                 <div class="col-12 col-md-6 text-center">
-                    <h1>Delivery que te llena el corazón</h1>
-                    <input class="buscador" type="text" placeholder="Busca restaurantes o tipos de comida">
+                    <div class="col-12">
+                        <h1>Delivery que te llena el corazón</h1>
+                    </div>
+                    <div class="col-12 btn-group">
+                        <input class="buscador" id="busqueda" type="text" placeholder="Busca restaurantes o tipos de comida">
+                        <button type="button" class="botonBuscar" id="btnBuscar">Buscar</button>
+                    </div>
                 </div>
                 <div class="col">
                 </div>
             </div>
         </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-12 text-center">
+                    <p class="titulo">Resultados de tu búsqueda</p>
+                    <p class="bajada">Llegó la hora de deleitarse</p>
+                    <div class="col-12 text-center" id="resultados"></div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -99,6 +116,10 @@
         </div>
     </section>
 
+    <footer class="col-12 text-center">
+        <div class="textoFooter">Foodie. © 2010-2018</div>
+    </footer>
+
 
 
 
@@ -108,6 +129,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
 
     <script src="js/index.js"></script>
+    <script src="js/buscador.js"></script>
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-FiXBmiCAqWxcg1wXrb5IldIQs3gurDE&callback=initMap">
