@@ -28,7 +28,7 @@ const renderInfo = datos => {
     <p class="nombreResto">${restaurant.restaurant.name}</p>
     <p class="lugarResto">¿Dónde? ${restaurant.restaurant.location.address}</p>
     <p class="categResto">Categoría: ${restaurant.restaurant.cuisines}</p>
-    <p class="col-1 text-center rating">${restaurant.restaurant.user_rating.aggregate_rating}</p>
+    <p class="col-1 text-center rating">${restaurant.restaurant.user_rating.aggregate_rating}/5.0</p>
     </div>`
     })
 }
